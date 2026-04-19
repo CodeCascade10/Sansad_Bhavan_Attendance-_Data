@@ -1,6 +1,13 @@
 import streamlit as st
 from pymongo import MongoClient
 import pandas as pd
+import os
+
+
+from pymongo import MongoClient
+
+MONGO_URI = os.getenv("MONGO_URI")
+client = MongoClient(MONGO_URI)
 
 # ---------------- CONFIG ----------------
 st.set_page_config(
